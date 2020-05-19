@@ -2,7 +2,19 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send('Hello World!');
+    let obj = {
+        pageTitle: 'Home',
+        name: 'Victor',
+        age: 21,
+        show: true,
+        ingredients: [
+            {name: 'Rice', amount: '500g'},
+            {name: 'Spaghetti', amount: '300g'}
+        ],
+        interests: ['node', 'js', 'css'],
+    };
+
+    res.render('home', obj);
 });
 
 router.get('/about-us', (req, res) => {

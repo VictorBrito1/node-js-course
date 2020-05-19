@@ -1,0 +1,26 @@
+{{ > header }}
+
+<h3>Welcome {{ name }}!</h3>
+
+{{ #show }}
+    <p>Your age: {{ age }}</p>
+{{ /show }}
+
+<ul>
+    {{ #ingredients }}
+        <li>{{ name }} - {{ amount }}</li>
+    {{ /ingredients }}
+</ul>
+{{ ^ingredients }}
+    <p>Do not have ingredients.</p>
+{{ /ingredients }}
+
+<hr>
+
+<ul>
+    {{ #interests }}
+        <li>{{ . }}</li>
+    {{ /interests }}
+</ul>
+
+<hr>
