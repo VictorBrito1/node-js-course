@@ -1,30 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const homeController = require('../controllers/homeController');
+const userController = require('../controllers/userController');
 
-router.get('/', (req, res) => {
-    let obj = {
-        pageTitle: 'Home',
-        name: 'Victor',
-        age: 21,
-        show: true,
-        ingredients: [
-            {name: 'Rice', amount: '500g'},
-            {name: 'Spaghetti', amount: '300g'}
-        ],
-        interests: ['node', 'js', 'css'],
-    };
-
-    res.render('home', obj);
-});
-
-router.get('/about-us', (req, res) => {
-    res.send('ABOUT US Page');
-});
-
-router.get('/posts/:slug', (req, res) => {
-    let slug = req.params.slug;
-
-    res.send('Slug: ' + slug);
-});
+router.get('/', homeController.userMiddleware, homeController.index);
+router.get('/users/login', userController.login);
+router.get('/users/register', userController.register);
 
 module.exports = router;
