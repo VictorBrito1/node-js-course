@@ -1,26 +1,10 @@
 {{ > header }}
 
-<h3>Welcome {{ userInfo.name }}!</h3>
+<h1>Home page</h1>
 
-{{ #show }}
-    <p>Your age: {{ age }}</p>
-{{ /show }}
-
-<ul>
-    {{ #ingredients }}
-        <li>{{ name }} - {{ amount }}</li>
-    {{ /ingredients }}
-</ul>
-{{ ^ingredients }}
-    <p>Do not have ingredients.</p>
-{{ /ingredients }}
-
-<hr>
-
-<ul>
-    {{ #interests }}
-        <li>{{ . }}</li>
-    {{ /interests }}
-</ul>
-
-<hr>
+{{ #posts }}
+    <h3><a href="/post/{{slug}}">{{ title }}</a></h3>
+    <p>{{ body }}</p>
+    <a href="/post/{{slug}}/edit">Editar</a>
+    <hr/>
+{{ /posts }}
