@@ -2,7 +2,13 @@
 
 <h2>New post</h2>
 
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
+    <label>
+        Image:
+        <input type="file" name="photo" />
+    </label>
+    <br/>
+
     <label>
         Title:
         <input type="text" name="title"/>
@@ -16,7 +22,8 @@
     <br/>
 
     <label>
-        Tags:
+        Tags: <small>(Separete tags with a comma)</small>
+        <input type="text" name="tags" />
     </label>
     <br/>
 

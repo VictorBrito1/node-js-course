@@ -3,8 +3,12 @@
 <h1>Home page</h1>
 
 {{ #posts }}
-    <h3><a href="/post/{{slug}}">{{ title }}</a></h3>
-    <p>{{ body }}</p>
-    <a href="/post/{{slug}}/edit">Editar</a>
-    <hr/>
+    <div class="post">
+        {{ #photo }}
+            <img src="/uploads/{{photo}}" />
+        {{ /photo }}
+        <h3><a href="/post/{{slug}}">{{ title }}</a></h3>
+        <p>{{ body }}</p>
+        <a href="/post/{{slug}}/edit">Edit</a>
+    </div>
 {{ /posts }}

@@ -1,29 +1,32 @@
 <html>
     <head>
         <title>{{ pageTitle }} {{ h.defaultPageTitle }}</title>
+        <link rel="stylesheet" href="/assets/css/style.css" />
     </head>
     <body>
-        <h1>Header</h1>
+        <header>
+            <h1>Header</h1>
 
-        <hr>
-            <ul>
-                {{ #h.menu }}
-                    <li><a href="{{ slug }}">{{ name }}</a></li>
-                {{ /h.menu }}
-            </ul>
-        <hr>
+            <hr>
+                <ul>
+                    {{ #h.menu }}
+                        <li><a href="{{ slug }}">{{ name }}</a></li>
+                    {{ /h.menu }}
+                </ul>
+            <hr>
+        </header>
 
         {{ #flashes }}
             {{ #success }}
-                <div>{{ . }}</div>
+                <div class="warning">{{ . }}</div>
             {{ /success }}
 
             {{ #error }}
-                <div>{{ . }}</div>
+                <div class="warning">{{ . }}</div>
             {{ /error }}
 
             {{ #info }}
-                <div>{{ . }}</div>
+                <div class="warning">{{ . }}</div>
             {{ /info }}
         {{ /flashes }}
     </body>
