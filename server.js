@@ -10,7 +10,7 @@ mongoose.connection.on('error', (error) => {
 });
 
 //Loading models
-require('./models/Post');
+require('./src/models/Post');
 
 const app = require('./app.js');
 app.set('port', process.env.PORT || 7777);

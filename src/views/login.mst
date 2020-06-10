@@ -1,0 +1,21 @@
+{{> header }}
+
+<h3>Login</h3>
+
+<form method="POST">
+    <label>
+        E-mail:
+        <input type="email" name="email"/>
+    </label>
+    <br/>
+
+    <label>
+        Password:
+        <input type="password" name="password"/>
+    </label>
+    <br/>
+
+    <label>
+        <input type="submit" value="Login"/>
+    </label>
+</form>

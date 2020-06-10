@@ -7,6 +7,10 @@
         <header>
             <h1>Header</h1>
 
+            {{ #user }}
+                Hi, {{ user.name }}! <a href="/users/logout">Logout</a>
+            {{ /user }}
+
             <hr>
                 <ul>
                     {{ #h.menu }}

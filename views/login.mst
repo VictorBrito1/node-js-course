@@ -1,6 +1,0 @@
-<h3>Login</h3>
-
-<form>
-    <input type="text" name="username"/>
-    <input type="button" value="Log in"
-</form>
