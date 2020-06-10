@@ -1,0 +1,15 @@
+{{> header }}
+
+<h3>Forgot my password</h3>
+
+<form method="POST">
+    <label>
+        E-mail:
+        <input type="email" name="email"/>
+    </label>
+    <br/>
+
+    <label>
+        <input type="submit" value="Reset password"/>
+    </label>
+</form>

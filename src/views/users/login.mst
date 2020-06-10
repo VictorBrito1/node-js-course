@@ -19,3 +19,5 @@
         <input type="submit" value="Login"/>
     </label>
 </form>
+
+<a href="/users/forget">Forgot my password</a>
