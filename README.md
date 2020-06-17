@@ -1,4 +1,4 @@
-Project developed in NodeJS during the course "NodeJS" by professor Bonieky Lacerda.
+Project developed in NodeJS during the course "NodeJS" by B7Web.
 
 - NodeJS;
 - Express;
